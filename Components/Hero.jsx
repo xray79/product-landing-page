@@ -1,14 +1,23 @@
 import styled from "styled-components";
 import NavBar from "./Navbar";
+import { useState } from "react";
 
 const Notification = styled.div`
   width: 100%;
   height: 4.5rem;
-  background-color: aliceblue;
+  background-color: #acaeaa;
   color: black;
   font-size: 1.8rem;
   display: grid;
   place-items: center;
+  position: fixed;
+  ${(props) => (props.scrolling ? "display: none;" : "")}
+`;
+
+const NoteLink = styled.a`
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const Background = styled.div`
@@ -84,7 +93,9 @@ const Hero = () => {
     <>
       <Background>
         <Notification>
-          The Mitte Glass Bottle is here -- available now in the Shop
+          <NoteLink href="#">
+            The Mitte Glass Bottle is here -- available now in the Shop
+          </NoteLink>
         </Notification>
         <NavBar />
         <TextBox>
