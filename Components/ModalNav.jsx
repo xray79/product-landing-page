@@ -21,11 +21,12 @@ import {
 
 const ModalMenu = styled(Menu)`
   background-color: white;
+  ${(props) => (props.clicked ? "z-index: 100;" : "")}
 `;
 
 const ModalLogo = styled(Logo)`
-  flex: none;
   align-self: flex-start;
+  margin-left: 2rem;
 `;
 
 const ModalList = styled(List)`
@@ -36,6 +37,12 @@ const ModalList = styled(List)`
   gap: 0.5rem;
   margin-left: 2rem;
   margin-bottom: 15rem;
+`;
+
+const ModalLi = styled(Li)`
+  &:last-child {
+    color: #cbbebe;
+  }
 `;
 
 const ModalIcons = styled(Icons)`
@@ -55,6 +62,12 @@ const ModalLang = styled(Lang)`
   align-self: flex-start;
   margin-left: 2rem;
   color: black;
+  font-size: 2rem;
+`;
+
+const ModalLangMenu = styled(LangMenu)`
+  color: grey;
+  box-shadow: 0 5px 5px 3px rgba(42, 39, 39, 0.113);
 `;
 
 const ModalDetails = styled(ModalList)`
@@ -98,7 +111,9 @@ const ModalNav = () => {
     <Portal>
       <ModalMenu clicked={isMenuClicked}>
         <ModalIcons>
-          <ModalLogo />
+          <ModalLogo>
+            <img src="./logo-black.svg" alt="" />
+          </ModalLogo>
           <ModalButton>Buy</ModalButton>
           <ModalStyledBadge>0</ModalStyledBadge>
         </ModalIcons>
@@ -114,10 +129,10 @@ const ModalNav = () => {
         </ModalBurgerMenu>
 
         <ModalList>
-          <Li>Mitte Home</Li>
-          <Li>Cartridge</Li>
-          <Li>Shop</Li>
-          <Li>Login or Signup</Li>
+          <ModalLi>Mitte Home</ModalLi>
+          <ModalLi>Cartridge</ModalLi>
+          <ModalLi>Shop</ModalLi>
+          <ModalLi>Login or Signup</ModalLi>
         </ModalList>
 
         <ModalDetails>
@@ -130,11 +145,11 @@ const ModalNav = () => {
         </ModalDetails>
 
         <ModalLang onClick={langClickHandler}>
-          EN ↓
-          <LangMenu active={isLangActive}>
+          EN
+          <ModalLangMenu active={isLangActive}>
             <LangMenuDE>DE</LangMenuDE>
             <div>EN</div>
-          </LangMenu>
+          </ModalLangMenu>
         </ModalLang>
         <CopyrightDiv>All Rights Reserved. © Copyright. 2022</CopyrightDiv>
       </ModalMenu>

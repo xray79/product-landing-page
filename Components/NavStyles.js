@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
+  z-index: 50;
   width: 100%;
   height: 10rem;
   padding: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: none;
+  background-color: transparent;
   color: white;
   position: fixed;
   top: 4.5rem;
@@ -73,7 +74,6 @@ export const StyledBadge = styled.button`
   border-radius: 50%;
   height: 3rem;
   width: 3rem;
-  padding: rem;
   margin: 0 2rem;
   background: none;
 `;

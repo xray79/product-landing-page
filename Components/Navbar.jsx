@@ -34,7 +34,7 @@ const NavBar = () => {
     <>
       <Nav clicked={isMenuClicked}>
         <Logo>
-          <AddCircleOutlineIcon sx={{ fontSize: 30 }} />
+          <img src="./logo-white.svg" alt="" />
         </Logo>
         <List>
           <Li>Mitte Home</Li>

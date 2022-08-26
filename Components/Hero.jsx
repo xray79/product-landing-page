@@ -3,6 +3,7 @@ import NavBar from "./Navbar";
 import { useState } from "react";
 
 const Notification = styled.div`
+  z-index: 50;
   width: 100%;
   height: 4.5rem;
   background-color: #acaeaa;
@@ -29,8 +30,9 @@ const Background = styled.div`
 `;
 
 const TextBox = styled.div`
+  /* z-index: 0; */
   width: 40rem;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   text-align: center;
   position: absolute;
   top: 80%;

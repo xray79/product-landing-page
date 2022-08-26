@@ -2,6 +2,8 @@ import Head from "next/head";
 import Hero from "../Components/Hero";
 import styled from "styled-components";
 import FeaturesGrid from "../Components/FeaturesGrid";
+import MachineShowcase from "../Components/MachineShowcase";
+import MachineShowcaseContext from "../store/MachineShowcaseContext";
 
 const Some = styled.div`
   height: 100vh;
@@ -19,6 +21,9 @@ export default function Home() {
       <div id="menuRoot"></div>
       <Hero />
       <FeaturesGrid />
+      <MachineShowcaseContext>
+        <MachineShowcase />
+      </MachineShowcaseContext>
       <Some />
     </div>
   );
