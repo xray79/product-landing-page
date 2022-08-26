@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import NavBar from "./Navbar";
-import { useState } from "react";
 
 const Notification = styled.div`
   z-index: 50;
@@ -12,7 +11,7 @@ const Notification = styled.div`
   display: grid;
   place-items: center;
   position: fixed;
-  ${(props) => (props.scrolling ? "display: none;" : "")}
+  ${(props) => (props.visibility ? "opacity: 0; z-index: -1" : "")}
 `;
 
 const NoteLink = styled.a`
@@ -30,9 +29,7 @@ const Background = styled.div`
 `;
 
 const TextBox = styled.div`
-  /* z-index: 0; */
   width: 40rem;
-  /* margin: 0 auto; */
   text-align: center;
   position: absolute;
   top: 80%;
@@ -90,16 +87,16 @@ const DownArrow = styled.div`
   }
 `;
 
-const Hero = () => {
+const Hero = (props) => {
   return (
     <>
       <Background>
-        <Notification>
+        <Notification visibility={props.vis}>
           <NoteLink href="#">
             The Mitte Glass Bottle is here -- available now in the Shop
           </NoteLink>
         </Notification>
-        <NavBar />
+        <NavBar visibility={props.vis} />
         <TextBox>
           <Heading>Meet Mitte Home your new 3-in-1 watermaker.</Heading>
           <Btn>Buy now</Btn>

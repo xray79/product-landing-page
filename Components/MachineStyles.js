@@ -27,6 +27,7 @@ export const Number = styled.div`
     top: 0;
     left: 200%;
     width: 20rem;
+    height: auto;
     background-color: white;
     color: grey;
     border-radius: 5px;
@@ -48,5 +49,4 @@ export const FlexImg = styled.div`
   font-size: 1.5rem;
   flex: 5;
   height: 100%;
-  transition: all 30s ease;
 `;

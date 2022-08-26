@@ -20,6 +20,7 @@ import {
 } from "./NavStyles";
 
 const ModalMenu = styled(Menu)`
+  /* position: relative; */
   background-color: white;
   ${(props) => (props.clicked ? "z-index: 100;" : "")}
 `;
@@ -56,6 +57,7 @@ const ModalBurgerMenu = styled(BurgerMenu)`
   align-self: flex-end;
   margin-right: 3rem;
   color: black;
+  ${(props) => (props.vis ? `position: absolute; top: 4%; right: 0;` : "")}
 `;
 
 const ModalLang = styled(Lang)`
@@ -96,7 +98,7 @@ const ModalStyledBadge = styled(StyledBadge)`
   border: 1px solid black;
 `;
 
-const ModalNav = () => {
+const ModalNav = (props) => {
   const {
     isMenuClicked,
     menuClickHandler,
@@ -123,6 +125,7 @@ const ModalNav = () => {
           onMouseLeave={menuHoverExitHandler}
           onClick={menuClickHandler}
           clicked={isMenuClicked}
+          vis={props.vis}
         >
           <BurgerBarTop hover={isMenuHover} clicked={isMenuClicked} />
           <BurgerBarBottom hover={isMenuHover} clicked={isMenuClicked} />
@@ -140,7 +143,7 @@ const ModalNav = () => {
           <ModalDetailsLi>Our story</ModalDetailsLi>
           <ModalDetailsLi>Jobs</ModalDetailsLi>
           <ModalDetailsLi>Contact</ModalDetailsLi>
-          <lModalDetailsLi>Support</lModalDetailsLi>
+          <ModalDetailsLi>Support</ModalDetailsLi>
           <ModalDetailsLi>Blog</ModalDetailsLi>
         </ModalDetails>
 
