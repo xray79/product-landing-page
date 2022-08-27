@@ -11,8 +11,11 @@ import {
 
 const BackgroundMitte = styled(Background)`
   background-color: white;
-  overflow: hidden;
-  height: 100vh;
+  height: auto;
+`;
+
+const MitteContainer = styled(Container)`
+  min-height: 100vh;
 `;
 
 const MitteFlexDesc = styled(FlexDesc)`
@@ -57,7 +60,7 @@ const MitteAppShowcase = () => {
   return (
     <>
       <BackgroundMitte>
-        <Container>
+        <MitteContainer>
           <FlexTitle>Mitte App</FlexTitle>
           <MitteFlexDesc>
             <MitteFlexDescHeading>
@@ -99,7 +102,7 @@ const MitteAppShowcase = () => {
           <MitteFlexImg>
             <Video src="./App-Preview_Web.mp4" autoPlay loop muted />
           </MitteFlexImg>
-        </Container>
+        </MitteContainer>
       </BackgroundMitte>
     </>
   );

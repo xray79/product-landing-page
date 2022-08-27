@@ -14,6 +14,10 @@ const GridContainer = styled(Container)`
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
   font-size: 2.1rem;
+
+  @media (max-width: 400px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const Img = styled.img`

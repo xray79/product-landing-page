@@ -1,5 +1,7 @@
 import { createContext, useState } from "react";
 
+export const screenWidth = "400px";
+
 export const menuContext = createContext();
 
 const Context = ({ children }) => {

@@ -10,6 +10,7 @@ import Slider from "../Components/Slider";
 import MitteAppShowcase from "../Components/MitteAppShowcase";
 import HeroLower from "../Components/HeroLower";
 import MachineSpecs from "../Components/MachineSpecs";
+import SliderLower from "../Components/SliderLower";
 
 const Some = styled.div`
   height: 100vh;
@@ -56,6 +57,7 @@ export default function Home() {
       <MitteAppShowcase />
       <HeroLower />
       <MachineSpecs />
+      <SliderLower />
       <Some />
     </div>
   );

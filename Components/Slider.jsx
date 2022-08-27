@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-const SliderContainer = styled.div`
+export const SliderContainer = styled.div`
   position: relative;
   background-color: none;
   height: 100vh;
@@ -10,7 +10,7 @@ const SliderContainer = styled.div`
 `;
 
 // Slides
-const Slide = styled.div`
+export const Slide = styled.div`
   width: 95%;
   height: 90%;
   background-image: url("./cartidge-balance-slider.webp");
@@ -21,22 +21,22 @@ const Slide = styled.div`
   transition: all 0.5s ease;
 `;
 
-const Slide2 = styled(Slide)`
+export const Slide2 = styled(Slide)`
   background-image: url("./cartidge-active-slider.webp");
   transform: translate(${({ pos }) => `${(pos + 1) * 100}%`}, -100%);
 `;
 
-const Slide3 = styled(Slide)`
+export const Slide3 = styled(Slide)`
   background-image: url("./cartidge-light-slider.webp");
   transform: translate(${({ pos }) => `${(pos + 2) * 100}%`}, -200%);
 `;
 
-const Slide4 = styled(Slide)`
+export const Slide4 = styled(Slide)`
   transform: translate(${({ pos }) => `${(pos + 3) * 100}%`}, -300%);
 `;
 
-// Arrow
-const RightArrow = styled.div`
+// Arrow button
+export const RightArrow = styled.div`
   position: absolute;
   z-index: 5;
   top: 50%;
@@ -51,18 +51,18 @@ const RightArrow = styled.div`
 `;
 
 // Slide content
-const SlideTextContainer = styled.div`
+export const SlideTextContainer = styled.div`
   max-width: 40rem;
   padding: 2rem 0 0 4rem;
 `;
 
-const SlideHeading = styled.h2`
+export const SlideHeading = styled.h2`
   color: white;
   font-size: 5rem;
   font-weight: 400;
 `;
 
-const SlideBtn = styled.button`
+export const SlideBtn = styled.button`
   background: transparent;
   border: none;
   color: white;
@@ -79,7 +79,7 @@ const SlideBtn = styled.button`
   }
 `;
 
-const SlideDescription = styled.div`
+export const SlideDescription = styled.div`
   position: absolute;
   top: 102%;
   left: 15%;
@@ -89,7 +89,7 @@ const SlideDescription = styled.div`
 `;
 
 // Dots styles
-const DotsContainer = styled.div`
+export const DotsContainer = styled.div`
   position: absolute;
   left: 2%;
   bottom: 6%;
@@ -101,7 +101,7 @@ const DotsContainer = styled.div`
   justify-content: space-between;
 `;
 
-const Dot = styled.div`
+export const Dot = styled.div`
   border: 1px solid black;
   border-radius: 50%;
   padding: 5px;
@@ -109,15 +109,15 @@ const Dot = styled.div`
   transition: all 0.2 ease;
 `;
 
-const Dot1 = styled(Dot)`
+export const Dot1 = styled(Dot)`
   ${({ pos }) => (pos === 0 ? "background-color: black;" : "")}
 `;
 
-const Dot2 = styled(Dot)`
+export const Dot2 = styled(Dot)`
   ${({ pos }) => (pos === -1 ? "background-color: black;" : "")}
 `;
 
-const Dot3 = styled(Dot)`
+export const Dot3 = styled(Dot)`
   ${({ pos }) => (pos === -2 ? "background-color: black;" : "")}
 `;
 
@@ -127,6 +127,17 @@ const Slider = () => {
   const clickHandler = () => {
     Position <= -2 ? setPosition(0) : setPosition(Position - 1);
   };
+
+  // change slide every x seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      Position <= -1 ? setPosition(0) : setPosition(Position - 1);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [Position]);
 
   const handleDot1Click = () => {
     setPosition(0);

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { screenWidth } from "../store/Context";
 
 export const Nav = styled.nav`
   z-index: 50;
@@ -19,6 +20,10 @@ export const Nav = styled.nav`
 
 export const Logo = styled.div`
   flex: 1;
+
+  @media (max-width: 400px) {
+    flex: none;
+  }
 `;
 
 export const List = styled.ul`
@@ -29,6 +34,10 @@ export const List = styled.ul`
   flex: 1;
   font-size: 2rem;
   gap: 5rem;
+
+  @media (max-width: 400px) {
+    display: none;
+  }
 `;
 
 export const Li = styled.li`

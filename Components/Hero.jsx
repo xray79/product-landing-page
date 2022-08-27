@@ -24,7 +24,7 @@ export const HeroBackground = styled.div`
   background-image: url("./mitte-home-hero.webp");
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: max(80rem, 100vh);
   width: 100%;
   position: relative;
 `;
