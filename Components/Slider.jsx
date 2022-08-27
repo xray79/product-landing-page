@@ -9,6 +9,7 @@ const SliderContainer = styled.div`
   overflow: hidden;
 `;
 
+// Slides
 const Slide = styled.div`
   width: 95%;
   height: 90%;
@@ -22,7 +23,6 @@ const Slide = styled.div`
 
 const Slide2 = styled(Slide)`
   background-image: url("./cartidge-active-slider.webp");
-
   transform: translate(${({ pos }) => `${(pos + 1) * 100}%`}, -100%);
 `;
 
@@ -35,6 +35,7 @@ const Slide4 = styled(Slide)`
   transform: translate(${({ pos }) => `${(pos + 3) * 100}%`}, -300%);
 `;
 
+// Arrow
 const RightArrow = styled.div`
   position: absolute;
   z-index: 5;
@@ -49,6 +50,7 @@ const RightArrow = styled.div`
   cursor: pointer;
 `;
 
+// Slide content
 const SlideTextContainer = styled.div`
   width: 20%;
   padding: 2rem 0 0 4rem;
@@ -79,7 +81,7 @@ const SlideBtn = styled.button`
 
 const SlideDescription = styled.div`
   position: absolute;
-  bottom: -7%;
+  top: 102%;
   left: 15%;
   font-size: 1.5rem;
   color: grey;
