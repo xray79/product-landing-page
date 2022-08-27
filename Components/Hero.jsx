@@ -20,15 +20,16 @@ const NoteLink = styled.a`
   }
 `;
 
-const Background = styled.div`
+export const HeroBackground = styled.div`
   background-image: url("./mitte-home-hero.webp");
   background-size: cover;
+  background-position: center;
   height: 100vh;
   width: 100%;
   position: relative;
 `;
 
-const TextBox = styled.div`
+export const TextBox = styled.div`
   width: 40rem;
   text-align: center;
   position: absolute;
@@ -36,7 +37,7 @@ const TextBox = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
 `;
-const Heading = styled.div`
+export const Heading = styled.div`
   color: white;
   font-size: 4.7rem;
   margin-bottom: 1.7rem;
@@ -90,7 +91,7 @@ const DownArrow = styled.div`
 const Hero = (props) => {
   return (
     <>
-      <Background>
+      <HeroBackground>
         <Notification vis={props.vis}>
           <NoteLink href="#">
             The Mitte Glass Bottle is here -- available now in the Shop
@@ -102,7 +103,7 @@ const Hero = (props) => {
           <Btn>Buy now</Btn>
           <DownArrow>↓</DownArrow>
         </TextBox>
-      </Background>
+      </HeroBackground>
     </>
   );
 };

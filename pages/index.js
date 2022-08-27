@@ -8,6 +8,7 @@ import { useInView } from "react-intersection-observer";
 import { useState, useEffect, useRef, useMemo } from "react";
 import Slider from "../Components/Slider";
 import MitteAppShowcase from "../Components/MitteAppShowcase";
+import HeroLower from "../Components/HeroLower";
 
 const Some = styled.div`
   height: 100vh;
@@ -52,6 +53,7 @@ export default function Home() {
       </MachineShowcaseContext>
       <Slider />
       <MitteAppShowcase />
+      <HeroLower />
       <Some />
     </div>
   );
