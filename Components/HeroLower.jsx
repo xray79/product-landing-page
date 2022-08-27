@@ -26,7 +26,7 @@ const HeroLower = () => {
           <HeroLowerDesc>
             Just one Mitte Home Mineral Cartridge replaces 250 single-use
             bottles of water, saving countless bottles over its lifetime. And we
-            offset 100% of carbon emissions we’ve generated through our
+            offset 100% of carbon emissions we&apos;ve generated through our
             partnership with ClimatePartner.
           </HeroLowerDesc>
         </HeroLowerTextBox>
