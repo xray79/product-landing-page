@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Nav = styled.nav`
   z-index: 50;
   width: 100%;
-  height: 10rem;
+  height: 8.5rem;
   padding: 1.5rem;
   display: flex;
   align-items: center;
@@ -140,6 +140,7 @@ export const BurgerBarBottom = styled.div`
 `;
 
 export const BurgerMenu = styled.div`
+  z-index: 200;
   background: none;
   border: none;
   height: 4rem;

@@ -74,22 +74,22 @@ const NavBar = (props) => {
 
   return (
     <>
-      <AdaptiveNav clicked={isMenuClicked} vis={props.visibility}>
+      <AdaptiveNav clicked={isMenuClicked} vis={props.vis}>
         <Logo>
           <img
-            src={props.visibility ? "./logo-black.svg" : "./logo-white.svg"}
+            src={props.vis ? "./logo-black.svg" : "./logo-white.svg"}
             alt=""
           />
         </Logo>
         <List>
-          <AdaptiveLi vis={props.visibility}>Mitte Home</AdaptiveLi>
-          <AdaptiveLi vis={props.visibility}>Cartridge</AdaptiveLi>
-          <AdaptiveLi vis={props.visibility}>Shop</AdaptiveLi>
+          <AdaptiveLi vis={props.vis}>Mitte Home</AdaptiveLi>
+          <AdaptiveLi vis={props.vis}>Cartridge</AdaptiveLi>
+          <AdaptiveLi vis={props.vis}>Shop</AdaptiveLi>
         </List>
         <Icons>
-          <AdaptiveButton vis={props.visibility}>Buy</AdaptiveButton>
-          <AdaptiveStyledBadge vis={props.visibility}>0</AdaptiveStyledBadge>
-          <AdaptiveLang onClick={langClickHandler} vis={props.visibility}>
+          <AdaptiveButton vis={props.vis}>Buy</AdaptiveButton>
+          <AdaptiveStyledBadge vis={props.vis}>0</AdaptiveStyledBadge>
+          <AdaptiveLang onClick={langClickHandler} vis={props.vis}>
             EN ↓
             <LangMenu active={isLangActive}>
               <LangMenuDE>DE</LangMenuDE>
@@ -105,17 +105,17 @@ const NavBar = (props) => {
             <AdaptiveBurgerBarTop
               hover={isMenuHover}
               clicked={isMenuClicked}
-              vis={props.visibility}
+              vis={props.vis}
             />
             <AdaptiveBurgerBarBottom
               hover={isMenuHover}
               clicked={isMenuClicked}
-              vis={props.visibility}
+              vis={props.vis}
             />
           </BurgerMenu>
         </Icons>
       </AdaptiveNav>
-      <ModalNav vis={props.visibility} />
+      <ModalNav vis={props.vis} />
     </>
   );
 };

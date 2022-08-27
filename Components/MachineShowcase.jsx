@@ -3,54 +3,15 @@ import MachineShowcaseImgClosed from "./MachineShowcaseImgClosed";
 import MachineShowcaseImgOpen from "./MachineShowcaseImgOpen";
 import { MachineContext } from "../store/MachineShowcaseContext";
 import { useContext } from "react";
-import { FlexImg } from "./MachineStyles";
-
-const Background = styled.div`
-  height: 85vh;
-  width: 100%;
-  background-color: #e5e4e2;
-  flex: 4;
-  overflow: hidden;
-`;
-
-const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-`;
-
-const FlexTitle = styled.div`
-  text-align: left;
-  font-size: 1.5rem;
-  flex: 1;
-  margin-left: 2rem;
-  color: #c2b1b1;
-`;
-
-const FlexDesc = styled.div`
-  text-align: left;
-  font-size: 1.5rem;
-  flex: 4;
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  padding-top: 8rem;
-`;
-
-const FlexDescHeading = styled.h2`
-  font-weight: 400;
-  width: 50%;
-  font-size: 4.8rem;
-  line-height: 5rem;
-  margin-bottom: 3rem;
-  align-self: flex-start;
-`;
-
-const FlexDescText = styled.p`
-  width: 43%;
-  color: #c2b1b1;
-`;
+import {
+  Background,
+  Container,
+  FlexDesc,
+  FlexDescHeading,
+  FlexDescText,
+  FlexTitle,
+  FlexImg,
+} from "./MachineStyles";
 
 const Enter = styled.div`
   background-color: none;
@@ -66,18 +27,11 @@ const MachineShowcase = () => {
   const { IsMouseOver, handleMouseEnter, handleMouseExit } =
     useContext(MachineContext);
 
-  const openMachine = () => {
-    if (IsMouseOver) {
-      return <MachineShowcaseImgOpen />;
-    }
-    return <MachineShowcaseImgClosed />;
-  };
-
   return (
     <>
       <Background>
         <Container>
-          <FlexTitle text="hello">
+          <FlexTitle>
             <p>Details</p>
           </FlexTitle>
           <FlexDesc>
@@ -94,7 +48,11 @@ const MachineShowcase = () => {
             </FlexDescText>
           </FlexDesc>
           <FlexImg onMouseLeave={handleMouseExit}>
-            {openMachine()}
+            {IsMouseOver ? (
+              <MachineShowcaseImgOpen />
+            ) : (
+              <MachineShowcaseImgClosed />
+            )}
             <Enter onMouseEnter={handleMouseEnter} />
           </FlexImg>
         </Container>

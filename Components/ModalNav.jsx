@@ -20,7 +20,6 @@ import {
 } from "./NavStyles";
 
 const ModalMenu = styled(Menu)`
-  /* position: relative; */
   background-color: white;
   ${(props) => (props.clicked ? "z-index: 100;" : "")}
 `;
@@ -57,7 +56,7 @@ const ModalBurgerMenu = styled(BurgerMenu)`
   align-self: flex-end;
   margin-right: 3rem;
   color: black;
-  ${(props) => (props.vis ? `position: absolute; top: 4%; right: 0;` : "")}
+  ${(props) => (props.vis ? `position: absolute; top: 3%; right: 0;` : "")}
 `;
 
 const ModalLang = styled(Lang)`

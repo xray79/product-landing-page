@@ -50,3 +50,49 @@ export const FlexImg = styled.div`
   flex: 5;
   height: 100%;
 `;
+
+export const Background = styled.div`
+  height: 85vh;
+  width: 100%;
+  background-color: #e5e4e2;
+  overflow: hidden;
+`;
+
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+`;
+
+export const FlexTitle = styled.div`
+  text-align: left;
+  font-size: 1.5rem;
+  flex: 1;
+  margin-left: 2rem;
+  color: #c2b1b1;
+`;
+
+export const FlexDesc = styled.div`
+  text-align: left;
+  font-size: 1.5rem;
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  padding-top: 8rem;
+`;
+
+export const FlexDescHeading = styled.h2`
+  font-weight: 400;
+  width: 50%;
+  font-size: 4.8rem;
+  line-height: 5rem;
+  margin-bottom: 3rem;
+  align-self: flex-start;
+`;
+
+export const FlexDescText = styled.p`
+  width: 43%;
+  color: #c2b1b1;
+`;

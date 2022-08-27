@@ -6,6 +6,8 @@ import MachineShowcase from "../Components/MachineShowcase";
 import MachineShowcaseContext from "../store/MachineShowcaseContext";
 import { useInView } from "react-intersection-observer";
 import { useState, useEffect, useRef, useMemo } from "react";
+import Slider from "../Components/Slider";
+import MitteAppShowcase from "../Components/MitteAppShowcase";
 
 const Some = styled.div`
   height: 100vh;
@@ -48,6 +50,8 @@ export default function Home() {
       <MachineShowcaseContext>
         <MachineShowcase />
       </MachineShowcaseContext>
+      <Slider />
+      <MitteAppShowcase />
       <Some />
     </div>
   );

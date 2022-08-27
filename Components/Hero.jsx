@@ -91,12 +91,12 @@ const Hero = (props) => {
   return (
     <>
       <Background>
-        <Notification visibility={props.vis}>
+        <Notification vis={props.vis}>
           <NoteLink href="#">
             The Mitte Glass Bottle is here -- available now in the Shop
           </NoteLink>
         </Notification>
-        <NavBar visibility={props.vis} />
+        <NavBar vis={props.vis} />
         <TextBox>
           <Heading>Meet Mitte Home your new 3-in-1 watermaker.</Heading>
           <Btn>Buy now</Btn>
