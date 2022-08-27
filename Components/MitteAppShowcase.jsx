@@ -10,15 +10,47 @@ import {
 } from "./MachineStyles";
 
 const BackgroundMitte = styled(Background)`
-  background-color: red;
+  background-color: white;
+  overflow: hidden;
+  height: 100vh;
 `;
 
 const MitteFlexDesc = styled(FlexDesc)`
   flex: 2;
 `;
 
+const MitteFlexDescHeading = styled(FlexDescHeading)`
+  width: 100%;
+`;
+
+const MitteFlexDescText = styled(FlexDescText)`
+  width: 100%;
+`;
+
+const MitteAppIconsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+  width: 10rem;
+  margin-top: 3rem;
+`;
+
+const Img = styled.img`
+  width: 15rem;
+  height: 5rem;
+`;
+
 const MitteFlexImg = styled(FlexImg)`
-  flex: 2;
+  flex: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+`;
+
+const Video = styled.video`
+  height: 100%;
+  width: 60%;
 `;
 
 const MitteAppShowcase = () => {
@@ -28,11 +60,11 @@ const MitteAppShowcase = () => {
         <Container>
           <FlexTitle>Mitte App</FlexTitle>
           <MitteFlexDesc>
-            <FlexDescHeading>
-              Smart Refills: Never run out of Mitte Home cartridges & CO₂
-              cylinders.
-            </FlexDescHeading>
-            <FlexDescText>
+            <MitteFlexDescHeading>
+              Smart Refills:
+              <br /> Never run out of Mitte Home cartridges & CO₂ cylinders.
+            </MitteFlexDescHeading>
+            <MitteFlexDescText>
               <p>
                 Since the Mitte Home cartridges and CO₂ cylinders need to be
                 replaced based on usage, we offer Smart Refills, a demand-driven
@@ -58,9 +90,15 @@ const MitteAppShowcase = () => {
                 so you can ship back the depleted consumables back to us for
                 free.
               </p>
-            </FlexDescText>
+            </MitteFlexDescText>
+            <MitteAppIconsContainer>
+              <Img src="./apple-badge-en-us.svg" alt="" />
+              <Img src="./google-play-badge-en.webp" alt="" />
+            </MitteAppIconsContainer>
           </MitteFlexDesc>
-          <MitteFlexImg>3</MitteFlexImg>
+          <MitteFlexImg>
+            <Video src="./App-Preview_Web.mp4" autoPlay loop muted />
+          </MitteFlexImg>
         </Container>
       </BackgroundMitte>
     </>
