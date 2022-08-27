@@ -52,7 +52,7 @@ const RightArrow = styled.div`
 
 // Slide content
 const SlideTextContainer = styled.div`
-  width: 20%;
+  max-width: 40rem;
   padding: 2rem 0 0 4rem;
 `;
 
@@ -142,7 +142,7 @@ const Slider = () => {
     <SliderContainer>
       <Slide pos={Position}>
         <SlideTextContainer>
-          <SlideHeading>Balanced Everyday Hydration.</SlideHeading>{" "}
+          <SlideHeading>Balanced Everyday Hydration.</SlideHeading>
           <SlideBtn>Learn more</SlideBtn>
         </SlideTextContainer>
         <SlideDescription>
@@ -155,7 +155,7 @@ const Slider = () => {
 
       <Slide2 pos={Position}>
         <SlideTextContainer>
-          <SlideHeading>Active Replenishment.</SlideHeading>{" "}
+          <SlideHeading>Active Replenishment.</SlideHeading>
           <SlideBtn>Learn more</SlideBtn>
         </SlideTextContainer>
         <SlideDescription>
@@ -168,7 +168,10 @@ const Slider = () => {
 
       <Slide3 pos={Position}>
         <SlideTextContainer>
-          <SlideHeading>Fresh as water. Light as air.</SlideHeading>{" "}
+          <SlideHeading>
+            Fresh as water.
+            <br /> Light as air.
+          </SlideHeading>
           <SlideBtn>Learn more</SlideBtn>
         </SlideTextContainer>
         <SlideDescription>
@@ -180,7 +183,7 @@ const Slider = () => {
 
       <Slide4 pos={Position}>
         <SlideTextContainer>
-          <SlideHeading>Balanced Everyday Hydration</SlideHeading>{" "}
+          <SlideHeading>Balanced Everyday Hydration</SlideHeading>
           <SlideBtn>Learn more</SlideBtn>
         </SlideTextContainer>
         <SlideDescription>
