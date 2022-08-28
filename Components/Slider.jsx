@@ -131,7 +131,7 @@ const Slider = () => {
   // change slide every x seconds
   useEffect(() => {
     const timer = setTimeout(() => {
-      Position <= -1 ? setPosition(0) : setPosition(Position - 1);
+      Position <= -2 ? setPosition(0) : setPosition(Position - 1);
     }, 3000);
 
     return () => {
