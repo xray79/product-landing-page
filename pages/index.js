@@ -4,13 +4,15 @@ import styled from "styled-components";
 import FeaturesGrid from "../Components/FeaturesGrid";
 import MachineShowcase from "../Components/MachineShowcase";
 import MachineShowcaseContext from "../store/MachineShowcaseContext";
-import { useInView } from "react-intersection-observer";
-import { useState, useEffect, useRef, useMemo } from "react";
 import Slider from "../Components/Slider";
 import MitteAppShowcase from "../Components/MitteAppShowcase";
 import HeroLower from "../Components/HeroLower";
 import MachineSpecs from "../Components/MachineSpecs";
 import SliderLower from "../Components/SliderLower";
+import TableSection from "../Components/TableSection";
+import CallToActionSection from "../Components/CallToActionSection";
+import Footer from "../Components/Footer";
+import { useState, useEffect, useRef, useMemo } from "react";
 
 const Some = styled.div`
   height: 100vh;
@@ -53,11 +55,15 @@ export default function Home() {
       <MachineShowcaseContext>
         <MachineShowcase />
       </MachineShowcaseContext>
+
       <Slider />
       <MitteAppShowcase />
       <HeroLower />
       <MachineSpecs />
       <SliderLower />
+      <TableSection />
+      <CallToActionSection />
+      <Footer />
       <Some />
     </div>
   );
