@@ -34,7 +34,8 @@ export const List = styled.ul`
   flex: 1;
   font-size: 2rem;
   gap: 5rem;
-  @media (max-width: 1100px) {
+
+  @media (max-width: 500px) {
     display: none;
   }
 `;

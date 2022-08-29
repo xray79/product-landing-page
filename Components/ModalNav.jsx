@@ -20,7 +20,6 @@ import {
 } from "./NavStyles";
 
 const ModalMenu = styled(Menu)`
-  transform: scale(0.2);
   background-color: white;
   ${(props) => (props.clicked ? "z-index: 100;" : "")}
 `;
