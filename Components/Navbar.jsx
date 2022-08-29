@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { menuContext } from "../store/Context";
 import ModalNav from "./ModalNav";
 import {

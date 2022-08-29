@@ -4,6 +4,10 @@ const MainContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 5rem;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 `;
 
 const LogoSearchContainer = styled.div`
@@ -12,7 +16,7 @@ const LogoSearchContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 60rem;
+  max-width: 60rem;
 `;
 
 const NewsletterContainer = styled.div`
@@ -44,7 +48,7 @@ const PrivacyList = styled.ul`
   list-style: none;
   display: flex;
   justify-content: space-between;
-  width: 40rem;
+  max-width: 40rem;
   font-size: 1.5rem;
 `;
 
@@ -56,7 +60,7 @@ const LinksContainer = styled.div`
   margin-right: 5rem;
   font-size: 1.5rem;
   color: #bab9b8;
-  width: 40rem;
+  max-width: 40rem;
 
   & li {
     list-style: none;
@@ -85,6 +89,7 @@ const InfoText = styled.p`
 `;
 
 const CopyrightContainer = styled.div`
+  width: 100%;
   margin-bottom: 7rem;
 `;
 

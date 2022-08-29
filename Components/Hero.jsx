@@ -15,6 +15,7 @@ const Notification = styled.div`
 `;
 
 const NoteLink = styled.a`
+  width: 100%;
   &:hover {
     text-decoration: underline;
   }
@@ -30,7 +31,7 @@ export const HeroBackground = styled.div`
 `;
 
 export const TextBox = styled.div`
-  width: 40rem;
+  max-width: 40rem;
   text-align: center;
   position: absolute;
   top: 80%;
