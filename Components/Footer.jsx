@@ -16,7 +16,7 @@ const LogoSearchContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 60rem;
+  width: 60rem;
 `;
 
 const NewsletterContainer = styled.div`

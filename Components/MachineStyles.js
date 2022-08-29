@@ -64,7 +64,7 @@ export const Container = styled.div`
   justify-content: center;
   height: 100%;
 
-  @media (max-width: 1500px) {
+  @media (max-width: 500px) {
     flex-direction: column;
   }
 `;
