@@ -14,10 +14,6 @@ import CallToActionSection from "../Components/CallToActionSection";
 import Footer from "../Components/Footer";
 import { useState, useEffect, useRef, useMemo } from "react";
 
-const Some = styled.div`
-  height: 100vh;
-`;
-
 export default function Home() {
   const [isVisible, setisVisible] = useState(false);
   const targetRef = useRef();
@@ -64,7 +60,6 @@ export default function Home() {
       <TableSection />
       <CallToActionSection />
       <Footer />
-      <Some />
     </div>
   );
 }
