@@ -20,6 +20,8 @@ import {
 } from "./NavStyles";
 
 const ModalMenu = styled(Menu)`
+  width: 100%;
+
   background-color: white;
   ${(props) => (props.clicked ? "z-index: 100;" : "")}
 `;
@@ -37,9 +39,16 @@ const ModalList = styled(List)`
   gap: 0.5rem;
   margin-left: 2rem;
   margin-bottom: 15rem;
+  width: 100%;
+
+  @media (max-width: 1100px) {
+    display: block;
+  }
 `;
 
 const ModalLi = styled(Li)`
+  width: 100%;
+
   &:last-child {
     color: #cbbebe;
   }
@@ -50,6 +59,10 @@ const ModalIcons = styled(Icons)`
   margin-top: 1.5rem;
   margin-right: 15rem;
   margin-bottom: 2rem;
+
+  @media (max-width: 1100px) {
+    opacity: 0;
+  }
 `;
 
 const ModalBurgerMenu = styled(BurgerMenu)`
@@ -76,15 +89,19 @@ const ModalDetails = styled(ModalList)`
   line-height: 2rem;
   margin-left: 1.3rem;
   margin-bottom: 4rem;
+  width: 100%;
 `;
 
-const ModalDetailsLi = styled(Li)``;
+const ModalDetailsLi = styled(Li)`
+  width: 100%;
+`;
 
 const CopyrightDiv = styled.div`
   align-self: flex-end;
   margin-right: 2rem;
   font-size: 1.5rem;
   color: grey;
+  width: 100%;
 `;
 
 const ModalButton = styled(Button)`
