@@ -63,6 +63,10 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
+
+  @media (max-width: 1500px) {
+    flex-direction: column;
+  }
 `;
 
 export const FlexTitle = styled.div`

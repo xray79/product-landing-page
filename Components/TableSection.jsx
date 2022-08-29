@@ -9,7 +9,9 @@ const Heading = styled.h2`
   margin-bottom: 3rem;
 `;
 
-const Container = styled.div``;
+const Container = styled.div`
+  overflow: auto;
+`;
 
 const Table = styled.table`
   margin: 5rem auto;
@@ -98,6 +100,10 @@ const InfoContainer = styled.div`
   margin: 0 auto;
   text-align: center;
   font-size: 2rem;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
 `;
 // Info item container
 const InfoItemContainer = styled.div`

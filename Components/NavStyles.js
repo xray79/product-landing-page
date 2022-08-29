@@ -21,7 +21,7 @@ export const Nav = styled.nav`
 export const Logo = styled.div`
   flex: 1;
 
-  @media (max-width: 400px) {
+  @media (max-width: 1100px) {
     flex: none;
   }
 `;
@@ -35,7 +35,7 @@ export const List = styled.ul`
   font-size: 2rem;
   gap: 5rem;
 
-  @media (max-width: 400px) {
+  @media (max-width: 1100px) {
     display: none;
   }
 `;

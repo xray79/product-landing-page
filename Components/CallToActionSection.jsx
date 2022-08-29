@@ -6,13 +6,19 @@ const MainContainer = styled.div`
   display: flex;
   justify-content: center;
   font-size: 1.6rem;
-  margin: max();
+
+  @media (max-width: 1175px) {
+    flex-direction: column-reverse;
+  }
 `;
 
-const ImgContainer = styled.div``;
+const ImgContainer = styled.div`
+  max-width: 80rem;
+`;
 
 const Img = styled.img`
-  max-width: 80rem;
+  max-width: 80%;
+  height: auto;
 `;
 
 const TextContainer = styled.div`
