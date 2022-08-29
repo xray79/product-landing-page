@@ -34,12 +34,12 @@ const SpecsFlexTitle = styled(FlexTitle)``;
 const SpecsFlexDesc = styled(FlexDesc)`
   position: relative;
   flex: 4;
-  padding: 0 5rem 0 10rem;
+  padding: 0 0rem 0 10rem;
 `;
 
 // Container 3 (right side)
 const SpecsFlexImg = styled(FlexImg)`
-  flex: 4;
+  flex: 5;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -98,6 +98,8 @@ const Plus3 = styled(Plus)`
 // Table styles
 const Table = styled.table`
   padding-bottom: 15rem;
+  border-collapse: collapse;
+  margin-bottom: 20rem;
 `;
 
 const Row = styled.tr``;
@@ -106,8 +108,8 @@ const TableBody = styled.tbody``;
 
 const TableCell = styled.td`
   padding: 1rem;
-  border-bottom: 1px solid grey;
-  font-weight: 600;
+  border-bottom: 1px solid #96929255;
+  font-weight: 400;
 `;
 
 const MachineSpecs = () => {
