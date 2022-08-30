@@ -18,9 +18,11 @@ const LogoSearchContainer = styled.div`
 `;
 
 const NewsletterContainer = styled.div`
+  width: 100%;
   & p {
     font-size: 2rem;
     margin-bottom: 0.7rem;
+    width: 100%;
   }
 
   & input {

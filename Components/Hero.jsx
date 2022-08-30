@@ -3,22 +3,22 @@ import NavBar from "./Navbar";
 
 const Notification = styled.div`
   z-index: 50;
-  width: 100%;
-  min-height: 4.5rem;
-  background-color: #acaeaa;
-  color: black;
-  font-size: 1.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   position: fixed;
-  ${(props) => (props.visibility ? "opacity: 0; z-index: -1" : "")}
+
+  width: 100%;
+
+  background-color: #acaeaa;
+  color: black;
+  font-size: 1.8rem;
+
+  ${(props) => (props.visibility ? "display: none; z-index: -1" : "")}
 `;
 
 const NoteLink = styled.a`
-  width: auto;
-  height: auto;
-  overflow: hidden;
   &:hover {
     text-decoration: underline;
   }

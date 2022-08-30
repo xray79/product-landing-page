@@ -21,6 +21,8 @@ import {
 
 const ModalMenu = styled(Menu)`
   background-color: white;
+  width: min(100%, 80%);
+  overflow: hidden;
   ${(props) =>
     props.clicked ? "z-index: 100; opacity: 1;" : "opacity: 0; z-index: -1;"}
 `;
@@ -36,8 +38,8 @@ const ModalList = styled(List)`
   align-items: flex-start;
   font-size: 5rem;
   gap: 0.5rem;
-  margin-left: 2rem;
-  margin-bottom: 15rem;
+  padding-left: 2rem;
+  padding-bottom: 15rem;
   width: 100%;
   display: block;
 `;

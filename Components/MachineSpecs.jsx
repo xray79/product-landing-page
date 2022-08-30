@@ -43,7 +43,7 @@ const SpecsFlexDesc = styled(FlexDesc)`
 
 // Flex container 2 (middle) text
 const SpecsFlexDescHeading = styled(FlexDescHeading)`
-  width: 100%;
+  /* width: 100%; */
   padding-top: 8rem;
   text-align: left;
   @media (max-width: 990px) {

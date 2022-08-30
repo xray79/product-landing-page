@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Nav = styled.nav`
   z-index: 50;
   height: 8.5rem;
+  height: auto;
   padding: 1.5rem;
   display: flex;
   align-items: center;
@@ -11,7 +12,6 @@ export const Nav = styled.nav`
   color: white;
   position: fixed;
   top: 4.5rem;
-  left: 0;
   left: 0;
   right: 0;
   transition: all 0.3s ease;
@@ -37,7 +37,6 @@ export const List = styled.ul`
 
   @media (max-width: 700px) {
     display: none;
-    flex: none;
   }
 `;
 
@@ -64,14 +63,11 @@ export const Li = styled.li`
 `;
 
 export const Icons = styled.div`
-  max-width: 100%;
   display: flex;
   align-items: center;
   flex: 1;
   justify-content: flex-end;
   @media (max-width: 700px) {
-    /* flex: 0; */
-    /* width: 0; */
   }
 `;
 
@@ -175,7 +171,7 @@ export const Menu = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 500;
+  z-index: 50;
 
   width: 100%;
   overflow: hidden;
