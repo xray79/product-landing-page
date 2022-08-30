@@ -6,7 +6,7 @@ const HeroLowerBackground = styled(HeroBackground)`
 `;
 
 const HeroLowerTextBox = styled(TextBox)`
-  width: 70rem;
+  width: min(60rem, 90%);
 `;
 
 const HeroLowerDesc = styled.p`

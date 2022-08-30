@@ -1,9 +1,7 @@
 import styled from "styled-components";
-import { screenWidth } from "../store/Context";
 
 export const Nav = styled.nav`
   z-index: 50;
-  max-width: 100%;
   height: 8.5rem;
   padding: 1.5rem;
   display: flex;
@@ -14,19 +12,21 @@ export const Nav = styled.nav`
   position: fixed;
   top: 4.5rem;
   left: 0;
+  left: 0;
   right: 0;
   transition: all 0.3s ease;
 `;
 
 export const Logo = styled.div`
   flex: 1;
-
-  @media (max-width: 1100px) {
-    flex: none;
+  @media (max-width: 700px) {
+    flex: 0;
+    width: 35px;
   }
 `;
 
 export const List = styled.ul`
+  max-width: 100%;
   list-style: none;
   display: flex;
   align-items: center;
@@ -35,8 +35,9 @@ export const List = styled.ul`
   font-size: 2rem;
   gap: 5rem;
 
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
     display: none;
+    flex: none;
   }
 `;
 
@@ -63,10 +64,15 @@ export const Li = styled.li`
 `;
 
 export const Icons = styled.div`
+  max-width: 100%;
   display: flex;
   align-items: center;
   flex: 1;
   justify-content: flex-end;
+  @media (max-width: 700px) {
+    /* flex: 0; */
+    /* width: 0; */
+  }
 `;
 
 export const Button = styled.button`
@@ -161,16 +167,18 @@ export const BurgerMenu = styled.div`
 `;
 
 export const Menu = styled.div`
-  ${(props) =>
-    props.clicked ? "opacity: 1; z-index: 1;" : "opacity: 0; z-index: -1;"};
+  ${(props) => (props.clicked ? "display: block;" : "display: none;")};
 
   transition: all 0.2s ease-in-out;
-  background-color: blue;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 500;
+
+  width: 100%;
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;

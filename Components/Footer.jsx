@@ -11,12 +11,10 @@ const MainContainer = styled.div`
 `;
 
 const LogoSearchContainer = styled.div`
-  margin-top: 5rem;
-  margin-left: 2rem;
+  margin: 5rem auto 3rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 60rem;
 `;
 
 const NewsletterContainer = styled.div`
@@ -26,7 +24,7 @@ const NewsletterContainer = styled.div`
   }
 
   & input {
-    width: 70%;
+    width: 100%;
     background-color: #e5e4e2;
     border: none;
     border-radius: 5rem;

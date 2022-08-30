@@ -15,7 +15,7 @@ const GridContainer = styled(Container)`
   text-align: center;
   font-size: 2.1rem;
 
-  @media (max-width: 400px) {
+  @media (max-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
   }
 `;

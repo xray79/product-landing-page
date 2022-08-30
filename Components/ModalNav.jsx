@@ -21,7 +21,8 @@ import {
 
 const ModalMenu = styled(Menu)`
   background-color: white;
-  ${(props) => (props.clicked ? "z-index: 100;" : "")}
+  ${(props) =>
+    props.clicked ? "z-index: 100; opacity: 1;" : "opacity: 0; z-index: -1;"}
 `;
 
 const ModalLogo = styled(Logo)`
@@ -38,10 +39,7 @@ const ModalList = styled(List)`
   margin-left: 2rem;
   margin-bottom: 15rem;
   width: 100%;
-
-  @media (max-width: 1100px) {
-    display: block;
-  }
+  display: block;
 `;
 
 const ModalLi = styled(Li)`
@@ -99,7 +97,7 @@ const CopyrightDiv = styled.div`
   margin-right: 2rem;
   font-size: 1.5rem;
   color: grey;
-  width: 100%;
+  max-width: 100%;
 `;
 
 const ModalButton = styled(Button)`

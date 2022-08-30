@@ -54,6 +54,7 @@ export const RightArrow = styled.div`
 export const SlideTextContainer = styled.div`
   max-width: 40rem;
   padding: 2rem 0 0 4rem;
+  overflow: visible;
 `;
 
 export const SlideHeading = styled.h2`

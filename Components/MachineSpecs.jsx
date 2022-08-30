@@ -18,34 +18,10 @@ const SpecsBackground = styled(Background)`
 `;
 
 // Inner Container
-const SpecsContainer = styled(Container)`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-`;
+const SpecsContainer = styled(Container)``;
 
-// Flex 3 subcontainers styles
-// Flex title, Flex Desc, Flex img
-// Container 1 (left side)
+// Container 1 (left side) main container styles
 const SpecsFlexTitle = styled(FlexTitle)``;
-
-// Container 2 (middle)
-const SpecsFlexDesc = styled(FlexDesc)`
-  position: relative;
-  flex: 4;
-  padding: 0 0rem 0 10rem;
-`;
-
-// Container 3 (right side)
-const SpecsFlexImg = styled(FlexImg)`
-  flex: 5;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  justify-self: flex-start;
-`;
 
 // Container text styles
 // Flex container 1 (left side) text
@@ -55,17 +31,38 @@ const SpecsFlexTitleText = styled.p`
   padding-bottom: 25rem;
 `;
 
+// Container 2 (middle) main container styles
+const SpecsFlexDesc = styled(FlexDesc)`
+  position: relative;
+  flex: 4;
+  padding: 0 0rem 0 10rem;
+  @media (max-width: 990px) {
+    padding: 0 0rem 0 0rem;
+  }
+`;
+
 // Flex container 2 (middle) text
 const SpecsFlexDescHeading = styled(FlexDescHeading)`
   width: 100%;
   padding-top: 8rem;
   text-align: left;
+  @media (max-width: 990px) {
+    text-align: left;
+    margin-left: 2rem;
+  }
 `;
 
 const SpecsFlexDescText = styled.p`
   color: grey;
-  max-width: 45rem;
+  width: min(45rem, 90%);
   padding-top: 2rem;
+  @media (max-width: 990px) {
+    text-align: left;
+    margin-left: 2rem;
+    align-self: flex-start;
+    margin-bottom: 5rem;
+    width: 90%;
+  }
 `;
 
 // Product image styles
@@ -87,11 +84,25 @@ const Plus1 = styled(Plus)`
 const Plus2 = styled(Plus)`
   top: 60%;
   left: 60%;
+
+  @media (max-width: 400px) {
+    left: 0%;
+  }
 `;
 
 const Plus3 = styled(Plus)`
   top: 80%;
   left: 35%;
+`;
+
+// Container 3 (right side)
+const SpecsFlexImg = styled(FlexImg)`
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  justify-self: flex-start;
 `;
 
 // Flex container 3 (right side) text
@@ -116,7 +127,7 @@ const MachineSpecs = () => {
   return (
     <>
       <SpecsBackground>
-        <Container>
+        <SpecsContainer>
           <SpecsFlexTitle>
             <SpecsFlexTitleText>Design</SpecsFlexTitleText>
           </SpecsFlexTitle>
@@ -181,7 +192,7 @@ const MachineSpecs = () => {
               </Table>
             </SpecsFlexDescText>
           </SpecsFlexImg>
-        </Container>
+        </SpecsContainer>
       </SpecsBackground>
     </>
   );

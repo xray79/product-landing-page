@@ -19,6 +19,7 @@ import {
 } from "./NavStyles";
 
 const AdaptiveNav = styled(Nav)`
+  width: 100%;
   ${(props) =>
     props.vis
       ? `background-color: white; 
@@ -30,6 +31,7 @@ const AdaptiveNav = styled(Nav)`
 `;
 
 const AdaptiveLi = styled(Li)`
+  width: 100%;
   &:first-child {
     &::after {
       ${(props) => (props.vis ? "background-color: black" : "")}

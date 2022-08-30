@@ -4,17 +4,21 @@ import NavBar from "./Navbar";
 const Notification = styled.div`
   z-index: 50;
   width: 100%;
-  height: 4.5rem;
+  min-height: 4.5rem;
   background-color: #acaeaa;
   color: black;
   font-size: 1.8rem;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   ${(props) => (props.visibility ? "opacity: 0; z-index: -1" : "")}
 `;
 
 const NoteLink = styled.a`
+  width: auto;
+  height: auto;
+  overflow: hidden;
   &:hover {
     text-decoration: underline;
   }
@@ -30,7 +34,8 @@ export const HeroBackground = styled.div`
 `;
 
 export const TextBox = styled.div`
-  width: 40rem;
+  width: min(90%, 400px);
+
   text-align: center;
   position: absolute;
   top: 80%;

@@ -2,11 +2,8 @@ import styled from "styled-components";
 import { Number } from "./MachineStyles";
 
 const Img = styled.img`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-height: 90%;
+  height: auto;
+  width: 90%;
 `;
 
 const NumberOne = styled(Number)`

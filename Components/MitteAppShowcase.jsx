@@ -9,21 +9,25 @@ import {
   FlexImg,
 } from "./MachineStyles";
 
-const BackgroundMitte = styled(Background)`
+const BackgroundMitte = styled.div`
   background-color: white;
-  height: auto;
 `;
 
 const MitteContainer = styled(Container)`
-  min-height: 100vh;
+  background-color: white;
+  padding: 10rem 0;
 `;
 
+// second container (middle) styles
 const MitteFlexDesc = styled(FlexDesc)`
   flex: 2;
+  margin-top: 0rem;
+  padding: 0 2rem;
 `;
 
 const MitteFlexDescHeading = styled(FlexDescHeading)`
   width: 100%;
+  padding-top: 0;
 `;
 
 const MitteFlexDescText = styled(FlexDescText)`
@@ -34,16 +38,22 @@ const MitteAppIconsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 5rem;
-  width: 10rem;
-  margin-top: 3rem;
+  /* gap: 5rem; */
+  width: max(20rem, 60%);
+  margin: 3rem auto 3rem 0;
+  overflow: hidden;
+  @media (max-width: 990px) {
+    margin: 3rem auto 3rem auto;
+  }
 `;
 
 const Img = styled.img`
-  width: 15rem;
-  height: 5rem;
+  width: 40%;
+  height: auto;
+  cursor: pointer;
 `;
 
+// Third container (right side)
 const MitteFlexImg = styled(FlexImg)`
   flex: 3;
   display: flex;
