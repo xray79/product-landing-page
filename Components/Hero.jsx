@@ -3,13 +3,11 @@ import NavBar from "./Navbar";
 
 const Notification = styled.div`
   z-index: 50;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  text-align: center;
   position: fixed;
 
   width: 100%;
+  padding: 0.7rem 0;
 
   background-color: #acaeaa;
   color: black;
@@ -19,6 +17,7 @@ const Notification = styled.div`
 `;
 
 const NoteLink = styled.a`
+  /* margin: 0.8rem auto; */
   &:hover {
     text-decoration: underline;
   }
