@@ -19,9 +19,13 @@ import {
   Menu,
 } from "./NavStyles";
 
-const ModalMenu = styled(Menu)`
+const ModalMenu = styled.div`
   background-color: white;
-  width: min(100%, 80%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   overflow: hidden;
   ${(props) =>
     props.clicked ? "z-index: 100; opacity: 1;" : "opacity: 0; z-index: -1;"}
@@ -39,7 +43,7 @@ const ModalList = styled(List)`
   font-size: 5rem;
   gap: 0.5rem;
   padding-left: 2rem;
-  padding-bottom: 15rem;
+  padding-bottom: 5rem;
   width: 100%;
   display: block;
 `;
@@ -66,8 +70,12 @@ const ModalIcons = styled(Icons)`
 const ModalBurgerMenu = styled(BurgerMenu)`
   align-self: flex-end;
   margin-right: 3rem;
+  margin-bottom: 2rem;
   color: black;
-  ${(props) => (props.vis ? `position: absolute; top: 3%; right: 0;` : "")}
+  ${(props) =>
+    props.vis
+      ? `position: absolute; top: 3%; right: 0;`
+      : "position: absolute; top 6%; right: 0;"}
 `;
 
 const ModalLang = styled(Lang)`
@@ -86,7 +94,7 @@ const ModalDetails = styled(ModalList)`
   font-size: 2.3rem;
   line-height: 2rem;
   margin-left: 1.3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   width: 100%;
 `;
 
@@ -100,6 +108,7 @@ const CopyrightDiv = styled.div`
   font-size: 1.5rem;
   color: grey;
   max-width: 100%;
+  text-align: right;
 `;
 
 const ModalButton = styled(Button)`

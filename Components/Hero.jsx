@@ -17,7 +17,6 @@ const Notification = styled.div`
 `;
 
 const NoteLink = styled.a`
-  /* margin: 0.8rem auto; */
   &:hover {
     text-decoration: underline;
   }
