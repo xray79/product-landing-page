@@ -15,13 +15,18 @@ const LogoSearchContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-bottom: 1.5rem;
+
+  & div {
+    margin-bottom: 2rem;
+  }
 `;
 
 const NewsletterContainer = styled.div`
   width: 100%;
   & p {
     font-size: 2rem;
-    margin-bottom: 0.7rem;
+    margin-bottom: 1.5rem;
     width: 100%;
   }
 
@@ -32,6 +37,7 @@ const NewsletterContainer = styled.div`
     border-radius: 5rem;
     padding: 1rem;
     margin-right: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   & button {
@@ -41,6 +47,7 @@ const NewsletterContainer = styled.div`
     padding: 1rem 3rem;
     background-color: black;
     color: white;
+    border-bottom: 1.5rem;
   }
 `;
 
@@ -75,6 +82,7 @@ const ListContainer = styled.div`
 
   & ul {
     margin-right: 5rem;
+    margin-left: 2rem;
   }
 `;
 

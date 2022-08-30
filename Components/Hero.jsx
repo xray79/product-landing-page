@@ -33,7 +33,6 @@ export const HeroBackground = styled.div`
 
 export const TextBox = styled.div`
   width: min(90%, 400px);
-
   text-align: center;
   position: absolute;
   top: 80%;
@@ -44,6 +43,9 @@ export const Heading = styled.div`
   color: white;
   font-size: 4.7rem;
   margin-bottom: 1.7rem;
+  @media (max-width: 500px) {
+    font-size: 3.5rem;
+  }
 `;
 const Btn = styled.button`
   padding: 1rem 2rem;

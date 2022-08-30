@@ -40,6 +40,7 @@ const SlideLowerName = styled.p`
   left: 40%;
   font-size: 1.6rem;
   color: white;
+  
 `;
 // Dots container styles
 const SlideLowerDotsContainer = styled(DotsContainer)`

@@ -61,6 +61,9 @@ export const SlideHeading = styled.h2`
   color: white;
   font-size: 5rem;
   font-weight: 400;
+  @media (max-width: 500px) {
+    font-size: 3rem;
+  }
 `;
 
 export const SlideBtn = styled.button`
